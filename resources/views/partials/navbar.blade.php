@@ -50,10 +50,9 @@
       @else
 
       <li class="nav-item">
-        <a><button href="/login" class="btn btn-outline-light border-right-0" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a />
-            Login
-          </button>
-          </button>
+        <a  href="/login" class="btn btn-outline-light border-right-0" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Login
+        </a>
       </li>
       @endauth
     </ul>
