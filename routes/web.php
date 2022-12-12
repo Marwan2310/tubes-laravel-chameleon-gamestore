@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,8 +28,16 @@ Route::get('/about', function () {
     ]);
 });
 
+
 // route login
 Route::get('/login', [LoginController::class, 'index']);
 
 // route register
 Route::get('/register', [RegisterController::class, 'index']);
+=======
+Route::get('/categories', function () {
+return view('categories', [
+        'title' => 'Post Categories'
+    ]);
+});
+
