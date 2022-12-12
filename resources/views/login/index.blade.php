@@ -20,7 +20,7 @@
                 <input type="password" placeholder="Password">
                 <button>Login</button>
                 <p>
-                  Don't have an account? </p><p> <a href="#" style="text-decoration: none">Sign up</a>
+                  Don't have an account? </p><p> <a href="/register" style="text-decoration: none">Sign up</a>
                 </p>
             </form>
           </div>
