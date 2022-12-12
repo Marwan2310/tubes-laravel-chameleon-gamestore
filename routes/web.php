@@ -34,10 +34,9 @@ Route::get('/login', [LoginController::class, 'index']);
 
 // route register
 Route::get('/register', [RegisterController::class, 'index']);
-=======
+
 Route::get('/categories', function () {
-return view('categories', [
+    return view('categories', [
         'title' => 'Post Categories'
     ]);
 });
-
