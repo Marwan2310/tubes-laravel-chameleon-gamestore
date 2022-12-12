@@ -56,7 +56,7 @@ li {
 
 .banner-home h4 em {
   font-style: normal;
-  color: #9932CC;
+  color: #ec6090;
 }
 
 /* Rekomendasi */
@@ -64,90 +64,3 @@ li {
   background-color: transparent;
 
 }
-
-/*login */
-
-.login {
-  width: 500px;
-}
-
-form {
-  width: 250px;
-  margin: 60px auto;
-}
-
-
-p {
-  text-align: center;
-  margin: 10px;
-}
-
-.left img {
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
-  border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
-}
-
-form label {
-  display: block;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 5px;
-}
-
-input {
-  width: 100%;
-  margin: 2px;
-  border: none;
-  outline: none;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid gray;
-}
-
-button {
-  border: none;
-  outline: none;
-  padding: 8px;
-  width: 252px;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-  border-radius: 5px;
-  background: #9932CC;
-}
-
-button:hover {
-  background: #800080;
-}
-
-
-/* @media (max-width: 880px) {
-  .container {
-    width: 100%;
-    max-width: 750px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  form {
-    width: 300px;
-    margin: 20px auto;
-  }
-
-  .login {
-    width: 400px;
-    padding: 20px;
-  }
-
-  button {
-    width: 100%;
-  }
-
-  .left img {
-    width: 80%;
-    height: 80%;
-  }
-} */
