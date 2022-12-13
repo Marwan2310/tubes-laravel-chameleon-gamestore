@@ -9,7 +9,7 @@
       <div class="card mb-4 justify-content-center" style="background-image:url(img/bg2.png);">
         <div class="row g-0 ">
           <div class="col-md-6">
-            <img src="img/login5.jpg" class="img-fluid rounded-start" width="500"><br>
+            <img src="img/login.jpg" class="img-fluid rounded-start" width="500"><br>
           </div>
           <div class="login justify-content-center">
             <form action="">
