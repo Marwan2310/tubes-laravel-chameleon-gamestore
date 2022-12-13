@@ -23,15 +23,36 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Category::create([
-            'name' => 'Racing',
-            'slug' => 'racing'
+            'name' => 'Action',
+            'slug' => 'action'
 
         ]);
 
 
         Category::create([
-            'name' => 'Action',
-            'slug' => 'action'
+            'name' => 'Adventure',
+            'slug' => 'adventure'
+
+        ]);
+
+
+        Category::create([
+            'name' => 'Shooter',
+            'slug' => 'shooter'
+
+        ]);
+
+
+        Category::create([
+            'name' => 'Horror',
+            'slug' => 'horror'
+
+        ]);
+
+
+        Category::create([
+            'name' => 'Simulator',
+            'slug' => 'simulator'
 
         ]);
     }
