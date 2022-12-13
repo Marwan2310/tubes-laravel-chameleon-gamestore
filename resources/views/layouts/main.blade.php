@@ -13,12 +13,14 @@
   <link rel="stylesheet" href="/css/fontawesome.css">
 
 
-  @include('partials.navbar')
+
 
 </head>
 
 
 <body>
+
+  @include('partials.navbar')
 
   <div class="container mt-4">
 

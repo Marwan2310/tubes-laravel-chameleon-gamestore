@@ -43,17 +43,16 @@
               <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i> Logout</button>
             </form>
 
-
           </li>
         </ul>
       </li>
       @else
 
       <li class="nav-item">
-        <a><button href="/login" class="btn btn-outline-light border-right-0" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a />
-            Login
-          </button>
-          </button>
+        <a><button href="/login" class="btn btn-outline-light border-right-0" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </a>
+        Login
+        </button>
       </li>
       @endauth
     </ul>
