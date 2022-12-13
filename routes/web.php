@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Models\Category;
+
 
 
 
@@ -37,6 +39,8 @@ Route::get('/register', [RegisterController::class, 'index']);
 
 Route::get('/categories', function () {
     return view('categories', [
-        'title' => 'Post Categories'
+        'title' => 'Post Categories',
+        "active" => "categories",
+        'categories' => Category::all(),
     ]);
 });
