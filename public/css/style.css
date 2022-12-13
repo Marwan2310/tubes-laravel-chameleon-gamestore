@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
 
+body,
+html {
+  height: 100%;
+}
 
 h1,
 h2,
@@ -14,12 +18,7 @@ h6 {
 }
 
 
-
 body {
-
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
   background-image: url(/img/bg.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -30,6 +29,14 @@ body {
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+
 
 
 }
