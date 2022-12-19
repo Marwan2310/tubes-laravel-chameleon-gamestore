@@ -19,16 +19,14 @@ h6 {
 
 
 body {
-  background-image: url(/img/bg.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
-  backdrop-filter: blur(100px);
+  height: 100%;
+  background-image: url(/img/bgv2.png);
+  background-size: 100% 100%;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-attachment: fixed;
+
 }
 
 body {
@@ -44,6 +42,31 @@ body {
 li {
   color: white;
 }
+
+.search-input {
+  position: relative;
+}
+
+.search-input input {
+  background-color: #27292a;
+  height: 46px;
+  border-radius: 23px;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  padding: 0px 15px 0px 45px;
+}
+
+.search-input i {
+  position: absolute;
+  color: #666;
+  left: 20px;
+  top: 16px;
+  width: 18px;
+  height: 18px;
+  font-size: 16px;
+}
+
 
 .banner-home {
   background-image: url(/img/bg.jpg);
@@ -167,11 +190,6 @@ button:hover {
 
 /* register */
 
-/* register form {
-  width: 400px;
-  margin: 80px auto;
-} */
-
 .rounded-t-5 {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -185,4 +203,111 @@ button:hover {
   .rounded-bl-lg-5 {
     border-bottom-left-radius: 0.5rem;
   }
+}
+
+/* rekomendasi game */
+
+.rekomendasi-game {
+  margin-top: 60px;
+  padding: 30px;
+  background-image: url(/img/bg.jpg);
+  border-radius: 23px;
+}
+
+.rekomendasi-game .item {
+  background-image: url(/img/bg.jpg);
+  padding: 30px 15px;
+  border-radius: 23px;
+  margin-bottom: 30px;
+}
+
+.rekomendasi-game .item .item {
+  padding: 0px;
+  border-radius: 0px;
+  background-color: transparent;
+  margin-bottom: 0px;
+}
+
+.rekomendasi-game .item img {
+  border-radius: 23px;
+}
+
+.rekomendasi-game .item h4 {
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  display: inline-block;
+}
+
+.rekomendasi-game .item span {
+  color: #F0F8FF;
+  display: block;
+  margin-top: 7px;
+  font-weight: 400;
+}
+
+.rekomendasi-game .item ul {
+  float: right;
+  margin-top: 20px;
+}
+
+.rekomendasi-game .item ul li {
+  text-align: right;
+  color: #fff;
+  font-size: 14px;
+}
+
+.rekomendasi-game .item ul li:first-child i {
+  color: yellow;
+}
+
+.rekomendasi-game .item ul li:last-child i {
+  color: #ec6090;
+}
+
+.rekomendasi-game .main-button {
+  text-align: center;
+  margin-bottom: -53px;
+}
+
+.main-button a {
+  font-size: 14px;
+  color: #fff;
+  background-color: #663399;
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-button a:hover {
+  background-color: #fff;
+  color: #663399;
+}
+
+.main-border-button a {
+  font-size: 14px;
+  color: #663399;
+  background-color: transparent;
+  border: 1px solid #663399;
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-border-button a:hover {
+  border-color: #fff;
+  background-color: #fff;
+  color: #663399;
 }

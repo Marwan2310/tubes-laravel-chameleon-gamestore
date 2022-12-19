@@ -7,7 +7,6 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-
     <div class="collapse navbar-collapse me-5" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item ">
@@ -24,7 +23,6 @@
         </li>
     </div>
 
-
     <ul class="navbar-nav ms-auto">
       @auth
       <li class="nav-item dropdown">
@@ -37,35 +35,19 @@
             <hr class="dropdown-divider">
           </li>
           <li>
-
             <form action="/logout" method="post">
               @csrf
               <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i> Logout</button>
             </form>
-
           </li>
         </ul>
       </li>
       @else
-
       <li class="nav-item">
-
         <a href="/login" class="btn btn-outline-light border-right-0" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
-            
-
-        <a><button href="/login" class="btn btn-outline-light border-right-0" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        </a>
-        Login
-        </button>
-
       </li>
       @endauth
     </ul>
-
-
-
-
-
   </div>
   </div>
 </nav>
