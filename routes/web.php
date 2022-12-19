@@ -44,3 +44,10 @@ Route::get('/categories', function () {
         'categories' => Category::all(),
     ]);
 });
+
+Route::get('/game', function () {
+    return view('game', [
+        'title' => 'game',
+        "active" => "game",
+    ]);
+});
