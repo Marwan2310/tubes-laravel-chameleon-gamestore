@@ -10,16 +10,16 @@
     <div class="collapse navbar-collapse me-5" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item ">
-          <a class="nav-link text-white" href="/">Home</a>
+          <a class="nav-link text-white nav-link {{ ($active === "home") ? 'active' : 'home' }}" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/game">Game</a>
+          <a class="nav-link text-white nav-link {{ ($active === "game") ? 'active' : '' }}" href="/game">Game</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/categories">Category</a>
+          <a class="nav-link text-white nav-link {{ ($active === "categories") ? 'active' : '' }}" href="/categories">Category</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/about">About Us</a>
+          <a class="nav-link text-white nav-link {{ ($active === "about") ? 'active' : '' }}" href="/about">About Us</a>
         </li>
     </div>
 
@@ -44,7 +44,7 @@
       </li>
       @else
       <li class="nav-item">
-        <a href="/login" class="btn btn-outline-light border-right-0" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
+        <a href="/login" class="btn btn-outline-light border-right-0" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link {{ ($active === "login") ? 'active' : '' }}">Login</a>
       </li>
       @endauth
     </ul>
