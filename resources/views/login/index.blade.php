@@ -47,26 +47,22 @@
             <form>
               <!-- Email input -->
               <div class="form-outline mb-4">
-                <label for="email">Email</label>  
+                <label class="mb-2" for="email">Email</label>  
               <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required>
                 
               </div>
-              @error('email')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-          @enderror
+              
               <!-- Password input -->
               <div class="form-outline mb-4">
-                <label for="password">Password</label>
+                <label class="mb-2" for="password">Password</label>
                 <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
               </div>
               <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-4">
+              <button type="submit" class="w-100 btn btn-lg btn-primary mt-3 mb-2">
                 Login
               </button>
-              <p>
-                Don't have an account? </p><p> <a href="/register" style="text-decoration: none">Sign up</a>
+              <p class="text-center mb-2">
+                Don't have an account? </p><p class="text-center"> <a href="/register" style="text-decoration: none">Sign up</a>
               </p>
             </form>
           </div>
@@ -75,8 +71,11 @@
     </div>
   </div>
 </section>
+<!-- Section: Design Block -->
+
+{{-- 
       
-{{-- <div class="container">
+<div class="container">
   <div class=" row">
     <div class="col">
       <div class="card mb-4 justify-content-center" style="background-image:url(img/bg2.png);">
