@@ -13,28 +13,28 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/team.jpg" class="d-block w-100" alt="" height="460" style="border-radius: 23px;">
+      <img src="img/marwan.jpg" class="d-block w-100" alt="" height="460" style="border-radius: 23px;">
       <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.6); border-radius: 23px;">
         <h5>Marwan Hakim</h5>
         <p>Project Team Manager</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/team.jpg" class="d-block w-100" alt="" height="460" style="border-radius: 23px;">
+      <img src="img/dika.jpg" class="d-block w-100" alt="" height="460" style="border-radius: 23px;">
       <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.6); border-radius: 23px;">
         <h5>Dika Sulaeman Akbar</h5>
         <p>Back End Developer</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/team.jpg" class="d-block w-100" alt="" height="460" style="border-radius: 23px;">
+      <img src="img/yazman.jpg" class="d-block w-100" alt="" height="460" style="border-radius: 23px;">
       <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.6); border-radius: 23px;">
         <h5>Mochamad Yazman Yazid</h5>
         <p>Front End Developer</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/team.jpg" class="d-block w-100" alt="" height="460" style="border-radius: 23px;">
+      <img src="img/farriz.jpg" class="d-block w-100" alt="" height="460" style="border-radius: 23px;">
       <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.6); border-radius: 23px;">
         <h5>Farriz Brilliant Wichaksana</h5>
         <p>Front End Developer</p>
@@ -64,8 +64,8 @@
             <div class="row g-0">
               <div class="col-md-4 gradient-custom text-center text-white"
                 style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                  alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                <img src="img/pmarwan.png"
+                  alt="Avatar" class="img-fluid my-5" style="width: 120px;">
                 <h6>Marwan Hakim</h6>
                 <p>Project Team Leader</p>
               </div>
@@ -102,8 +102,8 @@
             <div class="row g-0">
               <div class="col-md-4 gradient-custom text-center text-white"
                 style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                  alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                <img src="img/pdika.png"
+                  alt="Avatar" class="img-fluid my-5" style="width: 120px;">
                 <h6>Dika Sulaeman Akbar</h6>
                 <p>Back End Developer</p>
               </div>
@@ -140,8 +140,8 @@
             <div class="row g-0">
               <div class="col-md-4 gradient-custom text-center text-white"
                 style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                  alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                <img src="img/pyazman.png"
+                  alt="Avatar" class="img-fluid my-5" style="width: 120px;">
                 <h6>Mochamad Yazman Yazid</h6>
                 <p>Front End Developer</p>
               </div>
@@ -178,8 +178,8 @@
             <div class="row g-0">
               <div class="col-md-4 gradient-custom text-center text-white"
                 style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                  alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                <img src="img/pfarriz.png"
+                  alt="Avatar" class="img-fluid my-5" style="width: 120px;">
                 <h6>Farriz Brilliant Wichaksana</h6>
                 <p>Front End Developer</p>
               </div>

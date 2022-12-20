@@ -37,7 +37,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="img/team.jpg" class="d-block w-100" alt="" height="460" style="border-radius: 23px;">
+        <img src="img/team2.jpg" class="d-block w-100" alt="" height="460" style="border-radius: 23px;">
         <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.6); border-radius: 23px;">
           <h5>Team</h5>
           <p>Get to know the Cameleon game store developers closer</p>
