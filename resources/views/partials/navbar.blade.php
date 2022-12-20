@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-transparent">
+<nav class="navbar navbar-expand-lg mb-5" style="background-image: url(/img/bg.jpg);">
   <div class="container">
     <a class="navbar-brand text-white fw-bold" href="#">
       <img src="img/logo2.png" alt="Bootstrap" width="60px" height="45px" style="color: aliceblue">Chameleon
