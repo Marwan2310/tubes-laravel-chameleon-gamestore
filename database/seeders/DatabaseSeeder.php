@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Category;
 use App\Models\User;
-
+use App\Models\Category;
+use App\Models\Post;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,24 +18,37 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
+
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
+
+
         User::create([
-            'name' => 'Dikz',
-            'email' => 'DKZ@gmail.com',
-            'username' => 'ganteng',
-            'password' => bcrypt('sepakbola')
-        ]);
-        Category::create([
-            'name' => 'FPS',
-            'slug' => 'fps'
+            'name' => 'Marwan Hakim',
+            'username' => 'Marwan',
+            'email' => 'marwan@gmail.com',
+            'password' => bcrypt('password')
+
 
         ]);
+
+        // User::create([
+        //     'name' => 'Amos',
+        //     'email' => 'amos@gmail.com',
+        //     'password' => bcrypt('123123123')
+
+
+        //]);
+
+        User::factory(3)->create();
 
         Category::create([
             'name' => 'Action',
             'slug' => 'action'
 
         ]);
-
 
         Category::create([
             'name' => 'Adventure',
@@ -46,22 +59,10 @@ class DatabaseSeeder extends Seeder
 
         Category::create([
             'name' => 'Shooter',
-            'slug' => 'shooter'
+            'slug' => 'shooterl'
 
         ]);
 
-
-        Category::create([
-            'name' => 'Horror',
-            'slug' => 'horror'
-
-        ]);
-
-
-        Category::create([
-            'name' => 'Simulator',
-            'slug' => 'simulator'
-
-        ]);
+        Post::factory(10)->create();
     }
 }
