@@ -101,67 +101,67 @@ li {
 
 }
 
-/* rekomendasi game */
+/* body*/
 
-.rekomendasi-game {
+.body {
   margin-top: 60px;
   padding: 30px;
   background-image: url(/img/bg.jpg);
   border-radius: 23px;
 }
 
-.rekomendasi-game .item {
+.body .item {
   background-image: url(/img/bg.jpg);
   padding: 30px 15px;
   border-radius: 23px;
   margin-bottom: 30px;
 }
 
-.rekomendasi-game .item .item {
+.body .item .item {
   padding: 0px;
   border-radius: 0px;
   background-color: transparent;
   margin-bottom: 0px;
 }
 
-.rekomendasi-game .item img {
+.body .item img {
   border-radius: 23px;
 }
 
-.rekomendasi-game .item h4 {
+.body .item h4 {
   font-size: 15px;
   margin-top: 20px;
   margin-bottom: 0px;
   display: inline-block;
 }
 
-.rekomendasi-game .item span {
+.body .item span {
   color: #F0F8FF;
   display: block;
   margin-top: 7px;
   font-weight: 400;
 }
 
-.rekomendasi-game .item ul {
+.body .item ul {
   float: right;
   margin-top: 20px;
 }
 
-.rekomendasi-game .item ul li {
+.body .item ul li {
   text-align: right;
   color: #fff;
   font-size: 14px;
 }
 
-.rekomendasi-game .item ul li:first-child i {
+.body .item ul li:first-child i {
   color: yellow;
 }
 
-.rekomendasi-game .item ul li:last-child i {
+.body .item ul li:last-child i {
   color: #ec6090;
 }
 
-.rekomendasi-game .main-button {
+.body .main-button {
   text-align: center;
   margin-bottom: -53px;
 }

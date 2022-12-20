@@ -12,7 +12,7 @@
   </div> --}}
 
   
-{{-- banner --}}
+{{-- slider --}}
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -57,7 +57,7 @@
   <br><br>
   {{-- rekomendasi game --}}
 
-  <div class="rekomendasi-game">
+  <div class="body">
     <div class="row">
       <div class="col-lg-12">
         <div class="heading-section">
@@ -111,7 +111,7 @@
   </div>
 
   {{-- rekomendasi category --}}
-  <div class="rekomendasi-game">
+  <div class="body">
     <div class="row">
       <div class="col-lg-12">
         <div class="heading-section">
