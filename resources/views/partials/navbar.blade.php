@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-transparent">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand text-white fw-bold" href="#">
       <img src="img/logo2.png" alt="Bootstrap" width="60px" height="45px" style="color: aliceblue">Chameleon
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
