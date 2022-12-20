@@ -10,10 +10,10 @@
     <div class="collapse navbar-collapse me-5" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item ">
-          <a class="nav-link text-white nav-link {{ ($active === "home") ? 'active' : 'home' }}" href="/">Home</a>
+          <a class="nav-link text-white nav-link {{ ($active === "home") ? 'active' : '' }}" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white nav-link {{ ($active === "game") ? 'active' : '' }}" href="/game">Game</a>
+          <a class="nav-link text-white nav-link {{ ($active === "posts") ? 'active' : '' }}" href="/posts">Game</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white nav-link {{ ($active === "categories") ? 'active' : '' }}" href="/categories">Category</a>
