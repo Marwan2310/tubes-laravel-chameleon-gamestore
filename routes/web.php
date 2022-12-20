@@ -70,6 +70,13 @@ Route::get('/game', function () {
     ]);
 });
 
+Route::get('/about', function () {
+    return view('about', [
+        'title' => 'About',
+        'active' => 'About',
+    ]);
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->middleware('auth');
