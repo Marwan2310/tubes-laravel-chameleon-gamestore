@@ -111,7 +111,7 @@ li {
 }
 
 .body .item {
-  background-image: url(/img/bg.jpg);
+  background-color: #00005C;
   padding: 30px 15px;
   border-radius: 23px;
   margin-bottom: 30px;
