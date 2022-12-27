@@ -25,20 +25,25 @@ use App\Http\Controllers\DashboardPostController;
 
 Route::get('/', function () {
     return view('home', [
-        "title" => "Home",
-        "active" => "home"
+        'title' => 'Home',
+        'active' => 'home',
+    ]);
+});
 
+Route::get('/categories', function () {
+    return view('categories', [
+        'title' => 'Post Categories',
+        'active' => 'categories',
+        'categories' => Category::all(),
     ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
-        "title" => "About"
-
+        'title' => 'About',
+        'active' => 'About',
     ]);
 });
-
-
 // route login
 // Route::get('/login', [LoginController::class, 'index']);
 
@@ -55,28 +60,6 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
-Route::get('/categories', function () {
-    return view('categories', [
-        'title' => 'Post Categories',
-        "active" => "categories",
-        'categories' => Category::all(),
-    ]);
-});
-
-Route::get('/game', function () {
-    return view('game', [
-        'title' => 'game',
-        "active" => "game",
-    ]);
-});
-
-Route::get('/about', function () {
-    return view('about', [
-        'title' => 'About',
-        'active' => 'About',
-    ]);
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->middleware('auth');
@@ -84,3 +67,13 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+
+
+Route::get('/pukultikus', function () {
+    return view('pukultikus.index', []);
+});
+
+
+Route::get('/2048', function () {
+    return view('2048.index', []);
+});
