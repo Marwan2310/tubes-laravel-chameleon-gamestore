@@ -5,14 +5,15 @@
 
 <body>
 
-  {{-- <div class="banner-home">
+  <div class="banner-home">
     <br><br>
     <h6>Welcome To Chameleon</h6>
-    <h4><em>Browse</em> Our Popular Games Here</h4>
-  </div> --}}
+    <h4><em>Browse</em> And <em>Play</em></h4>
+    <h4>Our Popular Games Here</h4>
+  </div>
 
 
-  {{-- slider --}}
+  <!-- {{-- slider --}}
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -53,9 +54,46 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
+  </div> -->
+
   <br><br>
-  {{-- rekomendasi game --}}
+
+  <!-- News Information -->
+
+  <div class="container">
+    <div class="row">
+      <h4>News Infromation Right Now</h4>
+      <br><br>
+      @foreach ($posts->skip(7) as $post )
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="position-absolute px-3 py-2 text-white" style="background-color: rgba(0,0,0,0.7)">
+            <a href="/posts?category={{ $post->category->slug }}" class="text-white text-decoration-none">{{ $post->category->name }}</a>
+          </div>
+          @if ($post->image)
+          <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}" class="img-fluid">
+          @else
+          <img src="https://source.unsplash.com/1200x400/?{{ $post->category->name }}" alt="{{ $post->category->name }}" class="img-fluid">
+          @endif
+          <div class="card-body">
+            <h5 class="card-title">{{ $post->title }}</h5>
+            <p>
+              <small>
+                <a href="/posts?=author={{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a>
+                {{ $post->created_at->diffForHumans() }}
+              </small>
+            </p>
+            <p class="card-text">{{ $post->excerpt }}</p>
+            <a href="/posts/{{ $post->slug }}" class="btn btn-info text-decoration-none text-white font-weight-bold" class="mb-5" role="button">Read more...</a>
+          </div>
+        </div>
+      </div>
+      @endforeach
+    </div>
+  </div>
+
+  <br><br>
+  <!-- Free to play game -->
 
   <div class="body">
     <div class="row">
@@ -98,13 +136,6 @@
               <h4 style="text-decoration: none; color:aliceblue">Pukul Tikus Tanah</h4><br><br>
               <a href="/pukultikus" role="button" class="btn btn-outline-info btn-rounded text-white" data-mdb-ripple-color="dark">Let's Play
               </a>
-            </div>
-          </div>
-
-
-          <div class="col-lg-12">
-            <div class="main-button">
-              <a href="/categories" style="text-decoration: none">View more</a>
             </div>
           </div>
         </div>

@@ -7,7 +7,6 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Contracts\Support\ValidatedData;
 use Illuminate\Support\Str;
 
 
