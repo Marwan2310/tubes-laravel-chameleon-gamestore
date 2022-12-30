@@ -7,10 +7,7 @@ use App\Models\Category;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\DashboardPostController;
-
-
-
-
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +24,7 @@ Route::get('/', function () {
     return view('home', [
         'title' => 'Home',
         'active' => 'home',
+        'posts' => Post::all(),
     ]);
 });
 
@@ -35,6 +33,7 @@ Route::get('/categories', function () {
         'title' => 'Post Categories',
         'active' => 'categories',
         'categories' => Category::all(),
+
     ]);
 });
 
