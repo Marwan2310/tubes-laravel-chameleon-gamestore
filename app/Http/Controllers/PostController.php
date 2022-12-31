@@ -25,9 +25,15 @@ class PostController extends Controller
 
 
         return view('posts', [
-            "title" => "All Posts" . $title,
+            "title" => "Games" . $title,
             "active" => "posts",
             "posts" => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(7)->WithQueryString()
+        ]);
+
+         return view('/', [
+            "title" => $title,
+            "active" => "home",
+            "posts" => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(20)->WithQueryString()
         ]);
     }
 
