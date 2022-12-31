@@ -51,7 +51,8 @@ class DashboardPostController extends Controller
       'slug' => 'required|unique:posts',
       'category_id' => 'required',
       'image' => 'image|file|max:5024',
-      'body' => 'required'
+      'body' => 'required',
+      'link' => 'required'
     ]);
 
     if ($request->file('image')) {
@@ -106,8 +107,8 @@ class DashboardPostController extends Controller
       'title' => 'required|max:255',
       'category_id' => 'required',
       'image' => 'image|file|max:5024',
-      'body' => 'required'
-
+      'body' => 'required',
+      'link' => 'required'
     ];
 
     if ($request->slug != $post->slug) {
