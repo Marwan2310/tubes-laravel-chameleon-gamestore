@@ -10,6 +10,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 
 
 
+
 class Post extends Model
 {
     use HasFactory, Sluggable;
@@ -68,4 +69,6 @@ class Post extends Model
             ]
         ];
     }
+
+
 }
