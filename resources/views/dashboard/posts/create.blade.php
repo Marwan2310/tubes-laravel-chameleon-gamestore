@@ -59,6 +59,19 @@
                 @enderror
             </div>
 
+
+            <div class="mb-3">
+                <label for="body" class="form-label">Body</label>
+                @error('body')
+                    <p class="text-danger">{{ $message }}</p>
+                @enderror
+                <input id="body" type="hidden" name="body" value="{{ old('body') }}">
+                <trix-editor input="body"></trix-editor>
+
+                </select>
+
+            </div>
+
             <div class="mb-3">
                 <label for="link" class="form-label">Link</label>
                 <input type="text" class="form-control @error('link') is-invalid @enderror" id="link" name="link"
@@ -73,16 +86,17 @@
 
 
             <div class="mb-3">
-                <label for="body" class="form-label">Body</label>
-                @error('body')
-                    <p class="text-danger">{{ $message }}</p>
+                <label for="download" class="form-label">Download</label>
+                <input type="text" class="form-control @error('download') is-invalid @enderror" id="download"
+                    name="download" required value="{{ old('download') }}">
+                @error('download')
+                    <div class=" invalid-feedback">
+                        {{ $message }}
+                    </div>
                 @enderror
-                <input id="body" type="hidden" name="body" value="{{ old('body') }}">
-                <trix-editor input="body"></trix-editor>
-
-                </select>
 
             </div>
+
 
             <button type="submit" class="btn btn-success">Create Post</button>
         </form>

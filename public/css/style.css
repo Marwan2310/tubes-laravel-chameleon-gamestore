@@ -106,7 +106,7 @@ li {
 }
 
 .body .item {
- 
+
   background-image: url(/img/Mantle.jpg);
   background-color: #00005C;
 
@@ -306,4 +306,15 @@ margin-top: 70px;
 
 .containerm .fadeIn-bottom {
   top: 80%
+}
+
+
+.containerm .wishlist .fa {
+
+    color: #cbcbcb;
+    font-size: 32px;
+}
+
+.containerm .fa:hover{
+    color: deepskyblue;
 }

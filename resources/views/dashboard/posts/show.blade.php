@@ -28,22 +28,44 @@
                         alt="{{ $post->category->name }}" class="img-fluid">
                 @endif
 
-                <div class="card">
+                <article class="my-3 fs-5">
+                    {!! $post->body !!}
+
+                </article>
+
+                <div class="container">
                     <?php
                     $link = $post->link;
+
                     $filter = explode('https://www.youtube.com/watch?v=', $link);
-                    $result = $filter[1];
+                    $result = sizeof($filter) > 1 ? $filter[1] : null;
                     ?>
+
+                    <?php if($result): ?>
                     <iframe loading="lazy" src="https://www.youtube.com/embed/{{ $result }}" width="560"
                         height="315" frameborder="0" allowfullscreen="allowfullscreen">
-
-
-                        <article class="my-3 fs-5">
-                            {!! $post->body !!}
-
-                        </article>
-
+                        <?php else: ?>
+                        {{ 'Wrong link' }}
+                        <?php endif; ?>
                 </div>
+
+                <div class="container">
+                    <?php
+                    $download = $post->download;
+
+                    $filter = explode('https://www.youtube.com/watch?v=', $download);
+                    $result = sizeof($filter) > 1 ? $filter[1] : null;
+                    ?>
+
+                    <?php if($result): ?>
+                    <iframe loading="lazy" src="{{ $result }}" width="560" height="315" frameborder="0"
+                        allowfullscreen="allowfullscreen">
+                        <?php else: ?>
+                        {{ 'Wrong download' }}
+                        <?php endif; ?>
+                </div>
+
+
             </div>
         </div>
     </div>
