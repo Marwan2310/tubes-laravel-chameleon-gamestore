@@ -82,6 +82,19 @@
                 <trix-editor input="body"></trix-editor>
             </div>
 
+            <div class="mb-3">
+                <label for="download" class="form-label">Download</label>
+                <input type="text" class="form-control @error('download') is-invalid @enderror" id="download"
+                    name="download" required value="{{ old('download') }}">
+                @error('download')
+                    <div class=" invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+
+            </div>
+
+
             <button type="submit" class="btn btn-primary">Update Post</button>
         </form>
     </div>

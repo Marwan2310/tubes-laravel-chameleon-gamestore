@@ -43,30 +43,20 @@
 
                     <?php if($result): ?>
                     <iframe loading="lazy" src="https://www.youtube.com/embed/{{ $result }}" width="560"
-                        height="315" frameborder="0" allowfullscreen="allowfullscreen">
-                        <?php else: ?>
-                        {{ 'Wrong link' }}
-                        <?php endif; ?>
+                        height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                    <?php else: ?>
+                    {{ 'Wrong link' }}
+                    <?php endif; ?>
                 </div>
 
                 <div class="container">
-                    <?php
-                    $download = $post->download;
+                    <div class="d-flex justify-content-center">
 
-                    $filter = explode('https://www.youtube.com/watch?v=', $download);
-                    $result = sizeof($filter) > 1 ? $filter[1] : null;
-                    ?>
+                    </div>
+                    <p> {!! $post->download !!}
+                    </p>
 
-                    <?php if($result): ?>
-                    <iframe loading="lazy" src="{{ $result }}" width="560" height="315" frameborder="0"
-                        allowfullscreen="allowfullscreen">
-                        <?php else: ?>
-                        {{ 'Wrong download' }}
-                        <?php endif; ?>
                 </div>
-
-
             </div>
         </div>
-    </div>
-@endsection
+    @endsection
