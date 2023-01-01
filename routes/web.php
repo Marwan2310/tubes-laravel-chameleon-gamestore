@@ -65,6 +65,7 @@ Route::get('/categories', function () {
         'title' => 'Post Categories',
         'active' => 'categories',
         'categories' => Category::all(),
+        'posts' => Post::all(),
 
     ]);
 });

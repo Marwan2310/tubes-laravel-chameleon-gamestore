@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts/main')
 
 @section('container')
     <div class="container">
@@ -42,7 +42,6 @@
                 </article>
 
 
-
                 {{-- Gameplay  --}}
 
                 <table class="table table-hover mt-2" style="width:100%">
@@ -55,8 +54,8 @@
                     </tbody>
                 </table>
                 <div class="container">
+                    <div style="max-height: 350px; overflow:hidden; text-align:center;">
 
-                    <div style="max-height: 350px; overflow:hidden;">
                         <?php
                         $link = $post->link;
 
@@ -66,14 +65,12 @@
 
                         <?php if($result): ?>
                         <iframe loading="lazy" src="https://www.youtube.com/embed/{{ $result }}" width="560"
-                            height="315" frameborder="0" allowfullscreen="allowfullscreen">
-                            <?php else: ?>
-                            {{ 'Wrong link' }}
-                            <?php endif; ?>
+                            height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                        <?php else: ?>
+                        {{ 'Wrong link' }}
+                        <?php endif; ?>
 
                     </div>
-
-
                 </div>
 
 
@@ -92,6 +89,11 @@
 
                 <div class="container">
 
+                    <div style="text-align:center;">
+                        <a href="{!! $post->download !!}"><button type="button"
+                                class="btn btn-primary">Download</button></a>
+                    </div>
+
                 </div>
 
             </div>
@@ -107,5 +109,3 @@
         </div>
     </div>
 @endsection
-
-<

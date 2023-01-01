@@ -20,7 +20,7 @@
                         <h4>New Games</h4><br>
                     </div>
                     @foreach ($posts->skip(-3) as $post)
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-4 mb-3 rounded">
                             <div class="content">
                                 <div class="content-overlay">
                                     <div class="content-details fadeIn-bottom">

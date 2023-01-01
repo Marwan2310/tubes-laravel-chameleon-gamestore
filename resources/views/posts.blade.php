@@ -1,4 +1,4 @@
-@extends('layouts/main')
+@extends('layouts.main')
 
 @section('container')
     <h1 class="mb-3 text-center">{{ $title }}</h1>
@@ -28,7 +28,7 @@
                         <h4>All Games</h4><br>
                     </div>
                     @foreach ($posts->skip(0) as $post)
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-4 mb-3 rounded">
                             <div class="content">
                                 <div class="content-overlay">
                                     <div class="content-details fadeIn-bottom">
