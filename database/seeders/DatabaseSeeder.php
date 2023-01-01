@@ -56,13 +56,12 @@ class DatabaseSeeder extends Seeder
 
         ]);
 
-
         Category::create([
             'name' => 'Shooter',
             'slug' => 'shooterl'
 
         ]);
 
-        Post::factory(10)->create();
+        Post::factory(20)->create();
     }
 }

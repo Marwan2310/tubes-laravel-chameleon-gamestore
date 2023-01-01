@@ -52,7 +52,10 @@ class DashboardPostController extends Controller
       'category_id' => 'required',
       'image' => 'image|file|max:5024',
       'body' => 'required',
-      'link' => 'required'
+      'link' => 'required',
+      'download' => 'required',
+
+
     ]);
 
     if ($request->file('image')) {
@@ -108,7 +111,10 @@ class DashboardPostController extends Controller
       'category_id' => 'required',
       'image' => 'image|file|max:5024',
       'body' => 'required',
-      'link' => 'required'
+      'link' => 'required',
+      'download' => 'required',
+
+
     ];
 
     if ($request->slug != $post->slug) {
@@ -155,4 +161,6 @@ class DashboardPostController extends Controller
     $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
     return response()->json(['slug' => $slug]);
   }
+
+
 }
