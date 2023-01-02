@@ -1,6 +1,9 @@
 @extends('layouts/main')
 
 @section('container')
+
+@endsection
+
 <div class="containerm">
   <div class="body">
       <div class="row">
@@ -32,3 +35,4 @@
     </div>
   </div>
 @endsection
+
