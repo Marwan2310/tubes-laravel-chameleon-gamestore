@@ -56,7 +56,6 @@ class DatabaseSeeder extends Seeder
 
         ]);
 
-
         Category::create([
             'title' => 'Shooter',
             'slug' => 'shooterl'

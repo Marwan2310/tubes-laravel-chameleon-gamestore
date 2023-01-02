@@ -7,7 +7,6 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Contracts\Support\ValidatedData;
 use Illuminate\Support\Str;
 
 
@@ -52,7 +51,11 @@ class DashboardPostController extends Controller
       'slug' => 'required|unique:posts',
       'category_id' => 'required',
       'image' => 'image|file|max:5024',
-      'body' => 'required'
+      'body' => 'required',
+      'link' => 'required',
+      'download' => 'required',
+
+
     ]);
 
     if ($request->file('image')) {
@@ -107,7 +110,10 @@ class DashboardPostController extends Controller
       'title' => 'required|max:255',
       'category_id' => 'required',
       'image' => 'image|file|max:5024',
-      'body' => 'required'
+      'body' => 'required',
+      'link' => 'required',
+      'download' => 'required',
+
 
     ];
 
@@ -155,4 +161,6 @@ class DashboardPostController extends Controller
     $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
     return response()->json(['slug' => $slug]);
   }
+
+
 }

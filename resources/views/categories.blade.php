@@ -2,6 +2,7 @@
 
 @section('container')
 
+
 {{-- slider --}}
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
    <div class="carousel-indicators">
@@ -69,28 +70,36 @@
               <img src="https://source.unsplash.com/1200x400/?{{ $category->title }}" alt="{{ $category->title }}" class="img-fluid">
               @endif
                   
-            </div>
-         </div>
-         </div>
-      
-      </a>
-      
-   </div>
-   @endforeach
-     </div>
-     
-   </div>
 
-@endsection
-{{-- @foreach ($categories as $category)
-      <div class="col-md-4">
-         <a href="/posts?category={{ $category->slug }}">
-            <div class="card text-bg-dark">
-               <img src="https://source.unsplash.com/500x500/?{{ $category->name }}" class="card-img" alt="{{ $category->name }}">
-               <div class="card-img-overlay d-flex align-items-center p-0">
-                  <h5 class="card-title text-center flex-fill p-4 fs-3" style-color: rgba(0,0,0,0.7)">{{ $category->name }}</h5>
-               </div>
+    <div class="containerm">
+        <div class="body">
+            <div class="row">
+                <div class="heading-section">
+                    <h4>All Genre</h4><br>
+                </div>
+                @foreach ($categories as $category)
+                    <div class="col-md-4 mb-3 rounded">
+                        <div class="content">
+                            <div class="content-overlay">
+                                <div class="content-details fadeIn-bottom">
+                                    <a
+                                        href="/posts?category={{ $category->slug }} "class="text-white text-decoration-none text-center align-middle">
+                                        <h3>{{ $category->name }}</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            @if ($category->image)
+                                <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}"
+                                    class="content-image">
+                            @else
+                                <img src="https://source.unsplash.com/560x315/?{{ $category->name }}"
+                                    alt="{{ $category->name }}" class="content-image">
+                            @endif
+                        </div>
+                    </div>
+                @endforeach
+
             </div>
-         </a>
-      </div>
-      @endforeach --}}
+        </div>
+    </div>
+@endsection

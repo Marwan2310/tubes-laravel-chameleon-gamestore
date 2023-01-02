@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->text('excerpt');
             $table->text('body');
+            $table->text('link');
+            $table->text('download');
             $table->timestamp('publish_at')->nullable();
             $table->timestamps();
         });

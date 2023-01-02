@@ -1,7 +1,13 @@
 body {
-  background-color: #fff;
+height: 100%;
+    background-image: url(/img/Mantle.jpg);
+    background-size: 100% 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-attachment: fixed;
   overflow: hidden;
-  paddin: 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -20,7 +26,7 @@ body {
 }
 
 div.game {
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 3px rgba(240, 236, 236, 0.979);
 }
 
 div.description {
@@ -80,6 +86,7 @@ div.description {
 }
 
 .a {
+    color: white;
   font-family: Nunito;
   font-size: 100px;
   font-weight: 200;
@@ -94,7 +101,7 @@ div.description {
   font-family: nunito;
   font-weight: 400;
   font-size: 30px;
-  color: grey;
+  color: white;
   text-align: center;
 }
 

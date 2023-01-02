@@ -76,7 +76,7 @@
 {{-- 
       
 <div class="container">
-  <div class=" row">
+  <div class="row">
     <div class="col">
       <div class="card mb-4 justify-content-center" style="background-image:url(img/bg2.png);">
         <div class="row g-0 ">

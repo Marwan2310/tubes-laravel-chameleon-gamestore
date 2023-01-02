@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -7,10 +7,8 @@ use App\Http\Controllers\AdminCategoryController;
 use App\Models\Category;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\DashboardPostController;
-
-
-
-
+use App\Http\Controllers\WishlistController;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,14 +25,48 @@ Route::get('/', function () {
     return view('home', [
         'title' => 'Home',
         'active' => 'home',
+        'posts' => Post::all(),
     ]);
+
 });
+
+
+Route::get('/pukultikus', function () {
+return view('pukultikus.index', [
+'active' => 'home',
+]);
+});
+
+
+Route::get('/2048', function () {
+return view('2048.index', [
+'active' => 'home',
+]);
+});
+
+
+Route::get('/snake', function () {
+return view('snake.index', [
+'active' => 'home',
+]);
+});
+
+Route::get('/tictactoe', function () {
+return view('tictactoe.index', [
+ 'active' => 'home',
+]);
+});
+
+
+
 
 Route::get('/categories', function () {
     return view('categories', [
         'title' => 'Post Categories',
         'active' => 'categories',
         'categories' => Category::all(),
+        'posts' => Post::all(),
+
     ]);
 });
 
@@ -66,6 +98,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('admin');
 
+
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 
 Route::get('/dashboard/categories/checkSlug', [AdminCategoryController::class, 'checkSlug'])->middleware('admin');
@@ -74,11 +107,3 @@ Route::resource('/dashboard/categories', AdminCategoryController::class)->middle
 
 
 
-Route::get('/pukultikus', function () {
-    return view('pukultikus.index', []);
-});
-
-
-Route::get('/2048', function () {
-    return view('2048.index', []);
-});
