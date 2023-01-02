@@ -2,11 +2,11 @@
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-  <h1 class="h2">Create new posts</h1>
+  <h1 class="h2">Create new categories</h1>
 </div>
 
 <div class="col-lg-8">
-    <form method="post" action="/dashboard/posts" class="mb-5" enctype="multipart/form-data">
+    <form method="post" action="/dashboard/categories" class="mb-5" enctype="multipart/form-data">
   @csrf
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
@@ -31,22 +31,7 @@
   </div>
 
   <div class="mb-3">
-    <label for="category" class="form-label">Category</label>
-    <select class="form-select" name="category_id">
-      @foreach ($categories as $category)
-      @if (old('category->id') == $category->id)
-      <option value="{{ $category_id }}" selected>{{ $category->title }}</option>
-      @else
-      <option value=" {{ $category->id }}">{{ $category->title }}</option>
-      @endif
-      @endforeach
-      
-    </select>
-   
-  </div>
-
-  <div class="mb-3">
-    <label for="image" class="form-label">Post Image</label>
+    <label for="image" class="form-label">Genre Image</label>
     <img class="img-preview img-fluid mb-3 col-sm-5">
     <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
     @error('image')
@@ -56,21 +41,10 @@
     @enderror
   </div>
 
-  <div class="mb-3">
-    <label for="body" class="form-label">Body</label>
-    @error('body')
-      <p class="text-danger">{{ $message }}</p>
-      @enderror
-      <input id="body" type="hidden" name="body" value="{{ old('body') }}">
-    <trix-editor input="body"></trix-editor>
-      
-    </select>
-   
-  </div>
 
 
   
-  <button type="submit" class="btn btn-success">Create Post</button>
+  <button type="submit" class="btn btn-success">Create Category</button>
 </form>
 </div>
 
@@ -79,14 +53,14 @@
   const slug = document.querySelector('#slug');
 
   title.addEventListener('change', function(){
-fetch('/dashboard/posts/checkSlug?title=' + title.value)
+fetch('/dashboard/categories/checkSlug?title=' + title.value)
 .then(response => response.json())
 .then(data => slug.value = data.slug)
   });
+  
 
-document.addEventListener('trix-file-accept', function(e) {
-  e.preventDefault();
-})
+
+
 
 function previewImage(){
         const image = document.querySelector('#image');

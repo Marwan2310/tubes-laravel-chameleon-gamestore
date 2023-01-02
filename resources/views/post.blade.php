@@ -7,11 +7,11 @@
 
       <h2 class="mb-3">{{ $post->title }}</h2>
 
-      <p>By. <a href="/blog?author={{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> in
+      <p>By. <a href="/posts?author={{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> in
         <a href="/posts?category={{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></p>
        
         @if ($post->image)
-        <div style="max-height: 350px; overflow:hidden;">
+        <div style="overflow: hidden; padding: 0; max-width: 350px;">
             <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}" class="img-fluid">
         </div>
         @else

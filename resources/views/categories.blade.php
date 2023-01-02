@@ -55,13 +55,20 @@
       @foreach ($categories as $category)
       <div class="col-lg-12">
       
-      <a href="/posts?category={{ $category->slug }}">
+      <a href="/categories?category={{ $category->slug }}">
       
          <div class="row">
             <div class="col-lg-6 col-sm-12">
             <div class="item">
-               <img src="https://source.unsplash.com/500x200/?{{ $category->name }}" alt="{{ $category->name }}"  class="col-lg-6 col-sm-12 " height="115">
-                  <h4 class="text-center ms-3">{{ $category->name }}</h4>
+              <h4 class="text-center ms-3">{{ $category->title }}</h4>
+              @if ($category->image)
+              <div style="overflow: hidden; padding: 0; max-width: 350px;">
+                <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->title }}" class="img-fluid">
+              </div>
+              @else
+              <img src="https://source.unsplash.com/1200x400/?{{ $category->title }}" alt="{{ $category->title }}" class="img-fluid">
+              @endif
+                  
             </div>
          </div>
          </div>
