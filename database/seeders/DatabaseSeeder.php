@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
 
         //]);
 
-        User::factory(3)->create();
+        User::factory(0)->create();
 
         Category::create([
             'title' => 'Action',
@@ -58,7 +58,7 @@ class DatabaseSeeder extends Seeder
 
         Category::create([
             'title' => 'Shooter',
-            'slug' => 'shooterl'
+            'slug' => 'shooter'
 
         ]);
 
