@@ -122,8 +122,6 @@ class AdminCategoryController extends Controller
       $validatedData['image'] = $request->file('image')->store('category-images');
     }
 
-    $validatedData['user_id'] = auth()->user()->id;
-    $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
 
     Category::where('id', $category->id)
       ->update($validatedData);

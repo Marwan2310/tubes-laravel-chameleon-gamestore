@@ -29,25 +29,8 @@
         <a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }}" aria-current="page" href="/dashboard/categories">
           <span data-feather="grid" class="align-text-bottom"></span>
           Post Categories
-
-       <li class="nav-item">
-        <a class="nav-link {{ Request::is('/*') ? 'active' : '' }}" href="/">
-          <span data-feather="home" class="align-text-bottom"></span>
-          Home
         </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" aria-current="page" href="/dashboard">
-          <span data-feather="book-open" class="align-text-bottom"></span>
-          Dashboard
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
-          <span data-feather="file-text" class="align-text-bottom"></span>
-          My Posts
-
-        </a>
+      
       </li>
     </ul>
     @endcan
