@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
 
-body,
-html {
-  height: 100%;
-}
+
 
 h1,
 h2,
@@ -18,14 +15,12 @@ h6 {
 }
 
 
+
 body {
   height: 100%;
-  background-image: url(/img/Mantle.jpg);
-  background-size: 100% 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-attachment: fixed;
+  background-image: url(/img/MoonlitAsteroid.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 
 }
 
@@ -101,18 +96,19 @@ li {
 .body {
   margin-top: 60px;
   padding: 30px;
-  background-image: url(/img/Mantle.jpg);
+  background-image: url(/img/MoonlitAsteroid.jpg);
   border-radius: 23px;
 }
 
 .body .item {
 
-  background-image: url(/img/Mantle.jpg);
+  background-image: url(/img/MoonlitAsteroid.jpg);
   background-color: #00005C;
 
   padding: 30px 15px;
   border-radius: 23px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .body .item .item {
@@ -222,7 +218,7 @@ li {
 /* News */
 
 .containerm {
-margin-top: 70px;
+  margin-top: 70px;
 }
 
 .containerm .title {
@@ -292,7 +288,7 @@ margin-top: 70px;
 
 .containerm .content-details h3 {
   color: #fff;
-  position :relative;
+  position: relative;
   font-weight: 500;
   letter-spacing: 0.15em;
   margin-bottom: 0.5em;
@@ -311,11 +307,10 @@ margin-top: 70px;
 
 .containerm .wishlist .fa {
 
-    color: #cbcbcb;
-    font-size: 32px;
+  color: #cbcbcb;
+  font-size: 32px;
 }
 
-.containerm .fa:hover{
-    color: deepskyblue;
+.containerm .fa:hover {
+  color: deepskyblue;
 }
-

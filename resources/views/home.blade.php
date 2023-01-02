@@ -88,7 +88,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="item">
                                     <img src="img/tictactoe.png" alt="" width="215" height="215"><br>
-                                    <h4 style="text-decoration: none; color:aliceblue">Pukul Tikus Tanah</h4><br><br>
+                                    <h4 style="text-decoration: none; color:aliceblue">Tic Tac Toe</h4><br><br>
                                     <a href="/tictactoe" role="button" class="btn btn-outline-info btn-rounded text-white"
                                         data-mdb-ripple-color="dark">Let's Play
                                     </a>
