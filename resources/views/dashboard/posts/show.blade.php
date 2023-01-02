@@ -1,7 +1,6 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
-
     <div class="container">
         <div class="row my-3">
             <div class="col-lg-8">
@@ -54,11 +53,8 @@
                     <div class="d-flex justify-content-center">
 
                     </div>
-                    <p> {!! $post->download !!}
-                    </p>
 
                 </div>
             </div>
         </div>
     @endsection
-
