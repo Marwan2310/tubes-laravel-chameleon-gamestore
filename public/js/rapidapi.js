@@ -1,7 +1,7 @@
 fetch('https://world-clock.p.rapidapi.com/json/est/now', {
  method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '8bcf0e49e5msh05c0c25a76063d0p174d45jsna31f79857eb9',
+		'X-RapidAPI-Key': 'f73bea065fmsh0c5a8c5707057b0p18f348jsnf7f74c62d4e2',
 		'X-RapidAPI-Host': 'world-clock.p.rapidapi.com'
 	}
 })

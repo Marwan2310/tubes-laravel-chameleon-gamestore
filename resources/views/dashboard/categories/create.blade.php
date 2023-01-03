@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-  <h1 class="h2">Create new categories</h1>
+  <h1 class="h2">Create new Genre</h1>
 </div>
 
 <div class="col-lg-8">
@@ -16,9 +16,9 @@
       {{ $message }}
     </div>
     @enderror
-   
+
   </div>
-  
+
   <div class="mb-3">
     <label for="slug" class="form-label">Slug</label>
     <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug') }}">
@@ -27,7 +27,7 @@
       {{ $message }}
     </div>
     @enderror
-   
+
   </div>
 
   <div class="mb-3">
@@ -43,8 +43,8 @@
 
 
 
-  
-  <button type="submit" class="btn btn-success">Create Category</button>
+
+  <button type="submit" class="btn btn-primary">Create Category</button>
 </form>
 </div>
 
@@ -57,7 +57,7 @@ fetch('/dashboard/categories/checkSlug?title=' + title.value)
 .then(response => response.json())
 .then(data => slug.value = data.slug)
   });
-  
+
 
 
 

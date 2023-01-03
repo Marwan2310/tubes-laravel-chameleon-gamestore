@@ -1,7 +1,7 @@
 @extends('dashboard.layouts.main')
 @section('container')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Edit Post</h1>
+        <h1 class="h2">Edit Games</h1>
     </div>
 
     <div class="col-lg-8">
@@ -61,7 +61,16 @@
             </div>
 
             <div class="mb-3">
-                <label for="link" class="form-label">Link</label>
+                <label for="body" class="form-label">Body</label>
+                @error('body')
+                    <p class="text-danger">{{ $message }}</p>
+                @enderror
+                <input id="body" type="hidden" name="body" value="{{ old('body', $post->body) }}">
+                <trix-editor input="body"></trix-editor>
+            </div>
+
+            <div class="mb-3">
+                <label for="link" class="form-label">Gameplay</label>
                 <input type="text" class="form-control @error('link') is-invalid @enderror" id="link" name="link"
                     required value="{{ old('link') }}">
                 @error('link')
@@ -70,15 +79,6 @@
                     </div>
                 @enderror
 
-            </div>
-
-            <div class="mb-3">
-                <label for="body" class="form-label">Body</label>
-                @error('body')
-                    <p class="text-danger">{{ $message }}</p>
-                @enderror
-                <input id="body" type="hidden" name="body" value="{{ old('body', $post->body) }}">
-                <trix-editor input="body"></trix-editor>
             </div>
 
             <div class="mb-3">

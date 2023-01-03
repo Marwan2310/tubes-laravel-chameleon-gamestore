@@ -31,13 +31,18 @@
         <ul class="navbar-nav ms-auto">
             @auth
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Welcome back, {{ auth()->user()->name }}
                     </a>
+
                     <ul class="dropdown-menu">
+                        @can("admin")
+
                         <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window"></i> My
                                 Dashboard</a></li>
+                                @endcan
+
                         <li>
                             <hr class="dropdown-divider">
                         </li>
