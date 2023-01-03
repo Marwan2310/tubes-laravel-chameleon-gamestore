@@ -1,6 +1,11 @@
 @extends('layouts.main')
 
 @section('container')
+
+
+
+
+
     <h1 class="mb-3 text-center">{{ $title }}</h1>
 
     <div class="row justify-content-center mb-4">
@@ -58,7 +63,7 @@
         <p class="text-center fs-4">Not Post Found.</p>
     @endif
 
-    <div class="containermm">
+    {{-- <div class="containermm">
         <div class="body">
             <div class="row">
                 <div class="heading-section">
@@ -71,7 +76,7 @@
 
         </div>
 
-    </div>
+    </div> --}}
 
     <div class="container d-flex justify-content-end">
         {{ $posts->links() }}
