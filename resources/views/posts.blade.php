@@ -22,6 +22,7 @@
 
     @if ($posts->count(5))
         <div class="containerm">
+
             <div class="body">
                 <div class="row">
                     <div class="heading-section">
@@ -50,11 +51,27 @@
                     @endforeach
                 </div>
             </div>
+
         </div>
         <br>
     @else
         <p class="text-center fs-4">Not Post Found.</p>
     @endif
+
+    <div class="containermm">
+        <div class="body">
+            <div class="row">
+                <div class="heading-section">
+                    <h4>All Games From Free to Play Games</h4><br>
+                </div>
+                <div class="games">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
     <div class="container d-flex justify-content-end">
         {{ $posts->links() }}

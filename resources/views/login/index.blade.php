@@ -16,7 +16,9 @@
 @endif
 
 <!-- Section: Design Block -->
-<section class="background-radial-gradient overflow-hidden">
+<div class="containerm">
+    <div class="body">
+<section class="background-radial-gradient overflow-hidden rounded">
 <h1 class="h3 text-center mt-3">Please Login</h1>
 <hr style="color: aqua;">
   <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
@@ -47,11 +49,11 @@
             <form>
               <!-- Email input -->
               <div class="form-outline mb-4">
-                <label class="mb-2" for="email">Email</label>  
+                <label class="mb-2" for="email">Email</label>
               <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required>
-                
+
               </div>
-              
+
               <!-- Password input -->
               <div class="form-outline mb-4">
                 <label class="mb-2" for="password">Password</label>
@@ -70,47 +72,8 @@
       </div>
     </div>
   </div>
+</div>
+</div>
 </section>
-<!-- Section: Design Block -->
-
-{{-- 
-      
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="card mb-4 justify-content-center" style="background-image:url(img/bg2.png);">
-        <div class="row g-0 ">
-          <div class="col-md-6">
-            <img src="img/login.jpg" class="img-fluid rounded-start" width="500"><br>
-          </div>
-          <div class="login justify-content-center">
-            <form action="/login" method="post">
-              @csrf
-              
-              <h1 class="text-center" style="color: #9932CC; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">chameleon</h1><hr>
-              <label for="email">Email</label>  
-              <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required>
-               
-                @error('email')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-          @enderror
-  
-          <label for="password">Password</label>
-                <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
-                
-        
-                <button>Login</button>
-                <p>
-                  Don't have an account? </p><p> <a href="/register" style="text-decoration: none">Sign up</a>
-                </p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> --}}
 @endsection
 
