@@ -26,6 +26,8 @@ Route::get('/', function () {
         'title' => 'Home',
         'active' => 'home',
         'posts' => Post::all(),
+
+
     ]);
 
 });
@@ -81,6 +83,7 @@ Route::get('/about', function () {
 // route login
 // Route::get('/login', [LoginController::class, 'index']);
 
+
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
@@ -94,14 +97,30 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
+
+
+Route::get('/', function () {
+    return view('home', [
+        'title' => 'Home',
+        'active' => 'home',
+        'posts' => Post::all(),
+
+    ]);
+})->middleware('auth');
+
+
 Route::get('/dashboard', function () {
     return view('dashboard.index');
-})->middleware('auth');
+})->middleware('admin');
+
+
 
 Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('admin');
 
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('admin');
 
-Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('admin');
+
 
 Route::get('/dashboard/categories/checkSlug', [AdminCategoryController::class, 'checkSlug'])->middleware('admin');
 

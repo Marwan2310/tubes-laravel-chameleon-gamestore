@@ -82,16 +82,29 @@
                             </tr>
                         </tbody>
                     </table>
+@auth
 
-                    <div class="col-lg-12">
-                        <div class="main-border-button">
-                            <div style="text-align:center;">
-                                <a href="{!! $post->download !!}">Download</a>
-                            </div>
-                        </div>
-                    </div>
+<div class="col-md-12">
+    <div style="text-align:center">
+    <a class="btn btn-primary mb-5 text-white font-weight-bold" href="{!! $post->download !!}" role="button">
+        Download</a>
+    </div>
+</div>
+@endauth
+
+
+
+                    <table class="table table-hover mt-2" style="width:100%">
+                        <tbody>
+                            <tr style="text-align:center;">
+                                <td background color="#33363b"><span style="color: #FFFFFF;"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     <div class="col-md-8">
-                        <a class="btn btn-info mb-5 text-white font-weight-bold" href="/posts" role="button">Back to
+                        <a class="btn btn-primary mb-5 text-white font-weight-bold" href="/posts" role="button">Back to
                             Posts</a>
                     </div>
                 </div>

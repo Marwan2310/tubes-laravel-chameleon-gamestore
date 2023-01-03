@@ -7,7 +7,7 @@
                 <h1 class="mb-3">{{ $post->title }}</h1>
 
                 <a href="/dashboard/posts" class="btn btn-info mb-3 text-white font-weight-bold"><span
-                        data-feather="arrow-left"></span> Back to my all posts</a>
+                        data-feather="arrow-left"></span> Back to my all Games</a>
                 <a href="/dashboard/posts/{{ $post->slug }}/edit"
                     class="btn btn-warning mb-3 text-white font-weight-bold"><span data-feather="edit"></span> Edit</a>
 
@@ -47,13 +47,6 @@
                     <?php else: ?>
                     {{ 'Wrong link' }}
                     <?php endif; ?>
-                </div>
-
-                <div class="container">
-                    <div class="d-flex justify-content-center">
-
-                    </div>
-
                 </div>
             </div>
         </div>
