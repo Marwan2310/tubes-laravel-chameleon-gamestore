@@ -1,7 +1,16 @@
-
 @extends('layouts.main')
 
 @section('container')
+    <style>
+        body {
+
+            background-image: url(/img/bg.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            background-color: #00204a;
+        }
+    </style>
 
     <body>
 
@@ -10,8 +19,13 @@
             <h6>Welcome To Chameleon</h6>
             <h4><em>Browse</em> And <em>Play</em></h4>
             <h4>Our Popular Games Here</h4>
-        </div>
+            <div class="date-now" style="color: white">
 
+            </div>
+        </div>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
 
         <!-- News Information -->
         <div class="containerm">
@@ -60,9 +74,22 @@
                                 <div class="item">
                                     <img src="img/tikustanah.png" alt="" width="215" height="215"><br>
                                     <h4 style="text-decoration: none; color:aliceblue">Pukul Tikus Tanah</h4><br><br>
-                                    <a href="/pukultikus" role="button" class="btn btn-outline-info btn-rounded text-white"
-                                        data-mdb-ripple-color="dark">Let's Play
+
+                                    @auth
+                                        <a href="/pukultikus" role="button"
+                                            class="btn btn-outline-primary btn-rounded text-white">Let's Play
+                                        </a>
+                                    @endauth
+
+                                    <?php
+                                    $loggedIn = auth()->check();
+                                    if ($loggedIn != 1) {
+                                    ?>
+                                    <a href="/login" role="button" class="btn btn-outline-primary btn-rounded text-white"
+                                        data-mdb-ripple-color="light">LOGIN FIRST
                                     </a>
+                                    <?php } ?>
+
                                 </div>
                             </div>
 
@@ -70,9 +97,26 @@
                                 <div class="item">
                                     <img src="img/2048_logo.png" alt="" width="215" height="215"><br>
                                     <h4 style="text-decoration: none; color:aliceblue">2048</h4><br><br>
-                                    <a href="/2048" role="button" class="btn btn-outline-info btn-rounded text-white"
-                                        data-mdb-ripple-color="dark">Let's Play
+
+
+
+                                    @auth
+                                        <a href="/2048" role="button" class="btn btn-outline-primary btn-rounded text-white"
+                                            data-mdb-ripple-color="dark">Let's Play
+                                        </a>
+                                    @endauth
+
+                                    <?php
+                                    $loggedIn = auth()->check();
+                                    if ($loggedIn != 1) {
+                                    ?>
+                                    <a href="/login" role="button" class="btn btn-outline-primary btn-rounded text-white"
+                                        data-mdb-ripple-color="dark">LOGIN FIRST
                                     </a>
+                                    <?php } ?>
+
+
+
                                 </div>
                             </div>
 
@@ -80,9 +124,21 @@
                                 <div class="item">
                                     <img src="img/snake.jpg" alt="" width="215" height="215"><br>
                                     <h4 style="text-decoration: none; color:aliceblue">Snake</h4><br><br>
-                                    <a href="/snake" role="button" class="btn btn-outline-info btn-rounded text-white"
-                                        data-mdb-ripple-color="dark">Let's Play
+                                    @auth
+                                        <a href="/snake" role="button" class="btn btn-outline-primary btn-rounded text-white"
+                                            data-mdb-ripple-color="dark">Let's Play
+                                        </a>
+                                    @endauth
+
+                                    <?php
+                                    $loggedIn = auth()->check();
+                                    if ($loggedIn != 1) {
+                                    ?>
+                                    <a href="/pukultikus" role="button"
+                                        class="btn btn-outline-primary btn-rounded text-white"
+                                        data-mdb-ripple-color="dark">LOGIN FIRST
                                     </a>
+                                    <?php } ?>
                                 </div>
                             </div>
 
@@ -90,9 +146,21 @@
                                 <div class="item">
                                     <img src="img/tictactoe.png" alt="" width="215" height="215"><br>
                                     <h4 style="text-decoration: none; color:aliceblue">Tic Tac Toe</h4><br><br>
-                                    <a href="/tictactoe" role="button" class="btn btn-outline-info btn-rounded text-white"
-                                        data-mdb-ripple-color="dark">Let's Play
+                                    @auth
+                                        <a href="/tictactoe" role="button"
+                                            class="btn btn-outline-primary btn-rounded text-white"
+                                            data-mdb-ripple-color="dark">Let's Play
+                                        </a>
+                                    @endauth
+
+                                    <?php
+                                    $loggedIn = auth()->check();
+                                    if ($loggedIn != 1) {
+                                    ?>
+                                    <a href="/login" role="button" class="btn btn-outline-primary btn-rounded text-white"
+                                        data-mdb-ripple-color="dark disabled">LOGIN FIRST
                                     </a>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
@@ -101,5 +169,3 @@
             </div>
         </div>
     @endsection
-
-

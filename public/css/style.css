@@ -16,20 +16,16 @@ h6 {
 
 
 
-body {
-  height: 100%;
-  background-image: url(/img/MoonlitAsteroid.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-
-}
 
 body {
 
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 16px;
-
+  height: 100%;
+   background-color: #00204a;
+    background-size: cover;
+    background-repeat: repeat;
 
 
 }
@@ -64,7 +60,7 @@ li {
 
 
 .banner-home {
-  background-image: url(/img/bg.jpg);
+  background-image: url();
   background-position: center center;
   background-size: cover;
   min-height: 380px;
@@ -96,14 +92,14 @@ li {
 .body {
   margin-top: 60px;
   padding: 30px;
-  background-image: url(/img/MoonlitAsteroid.jpg);
+background-color:#144272;
   border-radius: 23px;
 }
 
 .body .item {
 
-  background-image: url(/img/MoonlitAsteroid.jpg);
-  background-color: #00005C;
+  /* background-image: url(/img/unyu.jpg); */
+  background-color: #2C74B3;
 
   padding: 30px 15px;
   border-radius: 23px;
@@ -206,7 +202,7 @@ li {
 
 .background-radial-gradient {
   background-color: hsl(218, 41%, 15%);
-  background-image: url(/img/Mantle.jpg);
+  background-image: url(/img/unyu.jpg);
 }
 
 .bg-glass {
@@ -314,3 +310,4 @@ li {
 .containerm .fa:hover {
   color: deepskyblue;
 }
+

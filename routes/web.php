@@ -31,9 +31,11 @@ Route::get('/', function () {
 });
 
 
+
 Route::get('/pukultikus', function () {
 return view('pukultikus.index', [
 'active' => 'home',
+
 ]);
 });
 
@@ -104,6 +106,7 @@ Route::resource('/dashboard/posts', DashboardPostController::class)->middleware(
 Route::get('/dashboard/categories/checkSlug', [AdminCategoryController::class, 'checkSlug'])->middleware('admin');
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->middleware('admin');
+
 
 
 

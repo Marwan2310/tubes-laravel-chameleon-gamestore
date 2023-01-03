@@ -1,34 +1,20 @@
-fetch('https://free-to-play-games-database.p.rapidapi.com/api/filter?tag=3d.mmorpg.fantasy.pvp&platform=pc', {
-    method: 'GET',
+fetch('https://world-clock.p.rapidapi.com/json/est/now', {
+ method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'f73bea065fmsh0c5a8c5707057b0p18f348jsnf7f74c62d4e2',
-		'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+		'X-RapidAPI-Key': '8bcf0e49e5msh05c0c25a76063d0p174d45jsna31f79857eb9',
+		'X-RapidAPI-Host': 'world-clock.p.rapidapi.com'
 	}
 })
 .then(response => response.json())
 .then(data => {
-        const list = [...data];
         console.log(data)
-        list.map((item) => {
-            const game = `<img src="${item.thumbnail}">`
-            document.querySelector('.games').innerHTML += game;
-        })
-        console.log(list)
+        // posts
+        const date = data.dayOfTheWeek + " " + data.currentDateTime;
+        document.querySelector('.date-now').innerHTML += date;
     })
-    .catch(err => {console.error(err)
-    });
-// asdsadsadasdasdasdasd
+    .catch(err => console.error(err));
 
 
-    // const options = {
-    //     method: 'GET',
-    //     headers: {
-    //         'X-RapidAPI-Key': 'f73bea065fmsh0c5a8c5707057b0p18f348jsnf7f74c62d4e2',
-    //         'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-    //     }
-    // };
+//
 
-    // fetch('https://free-to-play-games-database.p.rapidapi.com/api/filter?tag=3d.mmorpg.fantasy.pvp&platform=pc', options)
-    //     .then(response => response.json())
-    //     .then(response => console.log(response))
-    //     .catch(err => console.error(err));
+
