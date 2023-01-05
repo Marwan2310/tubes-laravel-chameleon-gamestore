@@ -61,6 +61,13 @@ return view('tictactoe.index', [
 ]);
 });
 
+Route::get('/api', function () {
+    return view('api.index', [
+     'active' => 'home',
+    ]);
+    });
+
+
 
 
 
@@ -99,14 +106,14 @@ Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
 
 
-Route::get('/', function () {
-    return view('home', [
-        'title' => 'Home',
-        'active' => 'home',
-        'posts' => Post::all(),
+// Route::get('/', function () {
+//     return view('home', [
+//         'title' => 'Home',
+//         'active' => 'home',
+//         'posts' => Post::all(),
 
-    ]);
-})->middleware('auth');
+//     ]);
+// })->middleware('auth');
 
 
 Route::get('/dashboard', function () {

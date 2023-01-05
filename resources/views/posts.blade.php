@@ -1,9 +1,17 @@
+
+
 @extends('layouts.main')
 
 @section('container')
 
 
+<?php
+$sumber = 'https://www.freetogame.com/api/games';
+$konten = file_get_contents($sumber);
+$data = json_decode($konten, true);
 
+
+?>
 
 
     <h1 class="mb-3 text-center">{{ $title }}</h1>
@@ -63,20 +71,42 @@
         <p class="text-center fs-4">Not Post Found.</p>
     @endif
 
-    {{-- <div class="containermm">
+    <div class="containerm">
         <div class="body">
             <div class="row">
                 <div class="heading-section">
                     <h4>All Games From Free to Play Games</h4><br>
                 </div>
-                <div class="games">
-                </div>
+
+                <?php foreach ($data as $row) {
+
+                ?>
+                    <div class="col-md-4 mb-3 rounded">
+                        <div class="content">
+                            <div class="content-overlay">
+                                <div class="content-details fadeIn-bottom">
+                                    <a href="<?php echo $row['freetogame_profile_url']?>"
+                                        class="text-white text-decoration-none text-center align-middle">
+                                        <h3><?php echo $row['title']?></h3>
+                                    </a>
+                                </div>
+                            </div>
+                                <img src="<?php echo $row['thumbnail']?>" alt="..." class="content-image">
+                        </div>
+                    </div>
+                <?php }?>
+
+
+
+
 
             </div>
+        </div>
+
 
         </div>
 
-    </div> --}}
+    </div>
 
     <div class="container d-flex justify-content-end">
         {{ $posts->links() }}
@@ -85,3 +115,5 @@
 
 
 @endsection
+
+
