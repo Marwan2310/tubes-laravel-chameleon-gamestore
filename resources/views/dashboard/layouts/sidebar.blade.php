@@ -25,12 +25,17 @@
 
                   </div>
 
-                  <form action="/logout" method="post">
-                      @csrf
 
 
+                <form action="/logout" method="post">
+                    @csrf
+                    <button style="background-color:transparent; border:none;">
+                <a href="/" class="nav_link"><i class='bx bx-log-out nav_icon transparent'></i> <span
+                    >Logout</span></a>
+                    </button>
+                </form>
 
-                  </form>
+            </div>
               </nav>
           </div>
       @endcan

@@ -18,7 +18,7 @@
                 <button class="playerX">Player (X)</button>
                 <button class="playerO">Player (O)</button>
             </div>
-            <div class="credit">Created By <a href="https://www.youtube.com/codingnepal" target="_blank">CodingNepal</a>
+            <div class="credit">Source By <a href="https://www.youtube.com/codingnepal" target="_blank">CodingNepal</a>
             </div>
         </div>
     </div>

@@ -15,7 +15,7 @@
     <body>
 
         <div class="banner-home">
-            <br><br>
+
             <h6>Welcome To Chameleon</h6>
             <h4><em>Browse</em> And <em>Play</em></h4>
             <h4>Our Popular Games Here</h4>
